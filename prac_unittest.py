@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from unittest import TestCase
+import unittest
 
 from prac_doctest import fibonacci, fibonacci_memo
 
 
-class TestPracDoctest(TestCase):
+class TestPracDoctest(unittest.TestCase):
     def test__fibonacci_right(self):
         actual1 = fibonacci(0)
         self.assertEqual(actual1, 0)
@@ -41,3 +41,16 @@ class TestPracDoctest(TestCase):
         self.assertRaises(AssertionError, fibonacci_memo, u"Hello World")
         self.assertRaises(AssertionError, fibonacci_memo, 1.2)
         self.assertRaises(AssertionError, fibonacci_memo, -1.0)
+
+
+def main():
+    """
+    :return: int
+    """
+    unittest.main()
+    return 0
+
+
+if __name__ == "__main__":
+    import sys
+    sys.exit(main())
