@@ -99,7 +99,7 @@ def _fib_memo(n, memo):
 
 def main():
     """
-    :return: 0
+    :return: int
     """
     import doctest
     doctest.testmod()
